@@ -69,7 +69,7 @@ var getPlatforms = function (projectName) {
       { name: 'icon@2x.png',             size: 114  },
     ]
   });
-  platforms.push({
+  const android = {
     name : 'android',
     isAdded : fs.existsSync('platforms/android'),
     iconsPath : 'platforms/android/app/src/main/res/',
@@ -88,7 +88,21 @@ var getPlatforms = function (projectName) {
       { name: 'mipmap-xxhdpi/' + androidMipmapIconName,  size: 144 },
       { name: 'mipmap-xxxhdpi/' + androidMipmapIconName, size: 192 }
     ]
-  });
+  };
+
+  if (!settings.OLD_ANDROID_PLATFORM) {
+    android.icons.push(
+      { name: 'mipmap-hdpi-v26/ic_launcher_foreground.png',    size: 72  },
+      { name: 'mipmap-ldpi-v26/ic_launcher_foreground.png',    size: 36  },
+      { name: 'mipmap-mdpi-v26/ic_launcher_foreground.png',    size: 48  },
+      { name: 'mipmap-xhdpi-v26/ic_launcher_foreground.png',   size: 96  },
+      { name: 'mipmap-xxhdpi-v26/ic_launcher_foreground.png',  size: 144 },
+      { name: 'mipmap-xxxhdpi-v26/ic_launcher_foreground.png', size: 192 }
+    );
+  }
+
+  platforms.push(android);
+
   platforms.push({
     name : 'osx',
     isAdded : fs.existsSync('platforms/osx'),

@@ -11,7 +11,7 @@ $ sudo apt-get install imagemagick
 $ # on Mac: brew install imagemagick
 $ # on Windows: http://www.imagemagick.org/script/binary-releases.php#windows (check "Legacy tools")
 
-$ sudo npm install -g git+https://github.com/evidenceprime/cordova-icon.git#1.0.1
+$ sudo npm install -g git+https://github.com/evidenceprime/cordova-icon.git#1.0.2
 ```
 
 ### Requirements
