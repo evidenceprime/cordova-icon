@@ -2,7 +2,6 @@ var fs     = require('fs-extra');
 var path   = require('path');
 var xml2js = require('xml2js');
 var ig     = require('imagemagick');
-var colors = require('colors');
 var _      = require('underscore');
 var Q      = require('q');
 var argv   = require('minimist')(process.argv.slice(2));
@@ -46,14 +45,18 @@ var getPlatforms = function (projectName) {
       { name: 'icon-20@3x.png',          size: 60   },
       { name: 'icon-24@2x.png',          size: 48   },
       { name: 'icon-27.5@2x.png',        size: 55   },
+      { name: 'icon-33@2x.png',          size: 66   },
       { name: 'icon-29.png',             size: 29   },
       { name: 'icon-29@2x.png',          size: 58   },
       { name: 'icon-29@3x.png',          size: 87   },
       { name: 'icon-40.png',             size: 40   },
       { name: 'icon-40@2x.png',          size: 80   },
       { name: 'icon-44@2x.png',          size: 88   },
+      { name: 'icon-46@2x.png',          size: 92   },
       { name: 'icon-50.png',             size: 50   },
       { name: 'icon-50@2x.png',          size: 100  },
+      { name: 'icon-51@2x.png',          size: 102  },
+      { name: 'icon-54@2x.png',          size: 108  },
       { name: 'icon-60@2x.png',          size: 120  },
       { name: 'icon-60@3x.png',          size: 180  },
       { name: 'icon-72.png',             size: 72   },
@@ -64,6 +67,8 @@ var getPlatforms = function (projectName) {
       { name: 'icon-86@2x.png',          size: 172  },
       { name: 'icon-98@2x.png',          size: 196  },
       { name: 'icon-108@2x.png',         size: 216  },
+      { name: 'icon-117@2x.png',         size: 234  },
+      { name: 'icon-129@2x.png',         size: 258  },
       { name: 'icon-1024.png',           size: 1024 },
       { name: 'icon.png',                size: 57   },
       { name: 'icon@2x.png',             size: 114  },
