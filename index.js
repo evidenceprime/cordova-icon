@@ -1,3 +1,4 @@
+require('colors');
 var fs     = require('fs-extra');
 var path   = require('path');
 var xml2js = require('xml2js');
